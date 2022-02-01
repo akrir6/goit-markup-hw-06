@@ -90,6 +90,36 @@ img {
   fill: currentColor;
 }
 
+.button {
+  display: inline-flex;
+  justify-content: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 200px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--btnhover-text-color);
+  background-color: var(--accent-color);
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: background-color 250ms var(--hover-efect);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #188ce8;
+}
 /* --------------- header --------------- */
 .header {
   border-bottom: 1px solid #ececec;
@@ -201,7 +231,7 @@ img {
 }
 
 .footer .social-links {
-  margin-left: 70px;
+  margin-left: auto;
 }
 .footer address {
   margin-top: 20px;
@@ -228,7 +258,8 @@ img {
   color: #ffffff;
 }
 
-.connect {
+.connect,
+.subscribe {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -259,6 +290,70 @@ img {
   background-color: var(--accent-color);
 }
 
+.subscribes {
+  margin-left: auto;
+}
+
+.subscribe-form {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  /* height: 50px; */
+}
+
+.subscribe-button {
+  margin-left: 12px;
+  /* height: 50px; */
+}
+
+.subscribe-email {
+  margin: 0;
+  padding: 16px 15px;
+  width: 358px;
+  /* height: 50px; */
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.subscribe-email:focus + .subscribe-label,
+.subscribe-email:not(:placeholder-shown) + .subscribe-label {
+  transform: translateY(150%);
+}
+
+.subscribe-email:focus {
+  border-color: var(--accent-color);
+}
+
+.subscribe-label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: transform 250ms var(--hover-efect);
+}
+
+.send-icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: var(--btnhover-text-color);
+}
 /* ------------- sections styles -------------- */
 
 .section {
@@ -293,35 +388,10 @@ img {
 
 .order-button {
   display: flex;
-  justify-content: center;
 
-  padding: 10px 32px;
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
-  min-width: 200px;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-
-  color: var(--btnhover-text-color);
-  background-color: var(--accent-color);
-
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-
-  cursor: pointer;
-
-  transition: background-color 250ms var(--hover-efect);
-}
-
-.order-button:hover,
-.order-button:focus {
-  background-color: #188ce8;
 }
 
 /* --------------- other sections --------------- */
@@ -668,7 +738,7 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(100%, -50%) scale(0.5);
+  transform: translate(-50%, 100%) scale(0.5);
 }
 
 .modal {
@@ -677,6 +747,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
+  padding: 40px;
   width: 528px;
   height: 581px;
 
@@ -685,7 +756,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 250ms var(--hover-efect);
+  transition: transform 250ms var(--hover-efect) 50ms;
 }
 
 .close-button {
@@ -719,4 +790,45 @@ img {
   fill: #000000;
 
   transition: fill 250ms var(--hover-efect);
+}
+
+.modal-header {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* justify-content: space-between; */
+}
+
+.form-field {
+  /* display: flex; */
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-field ~ .form-field {
+  /* margin-left: 100px; */
+  margin-top: 10px;
+}
+
+.field-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent-color);
 }

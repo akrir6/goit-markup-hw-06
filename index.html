@@ -60,7 +60,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-section-title">Эффективные решения<br />для вашего бизнеса</h1>
-          <button data-modal-open type="button" class="order-button">Заказать услугу</button>
+          <button data-modal-open type="button" class="order-button button">Заказать услугу</button>
         </div>
       </section>
 
@@ -381,6 +381,23 @@
             </li>
           </ul>
         </div>
+        <div class="subscribes">
+          <h3 class="subscribe">Подпишитесь на рассылку</h3>
+          <form class="subscribe-form">
+            <input
+              type="email"
+              name="email"
+              class="subscribe-email"
+              id="subscribe-email"
+              placeholder=" "
+            />
+            <label for="subscribe-email" class="subscribe-label"> Email</label>
+            <button type="submit" class="subscribe-button button">
+              Подписаться
+              <svg class="send-icon"><use href="./images/icons.svg#send"></use></svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -389,6 +406,39 @@
         <button data-modal-close type="button" class="close-button">
           <svg class="close-icon"><use href="./images/icons.svg#close"></use></svg>
         </button>
+        <h2 class="modal-header">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="order-form">
+          <label>
+            <input type="text" class="form-field" />
+            Имя
+            <svg class="field-icon">
+              <use href="./images/icons.svg#person"></use>
+            </svg>
+          </label>
+          <label>
+            <input type="tel" class="form-field" />
+            Телефон
+            <svg class="field-icon"><use href="./images/icons.svg#phone"></use></svg>
+          </label>
+          <label>
+            <input type="email" class="form-field" />
+            Почта
+            <svg class="field-icon"><use href="./images/icons.svg#email"></use></svg>
+          </label>
+          <label>
+            <input type="text" class="form-field" />
+            Комментарий
+          </label>
+          <label
+            ><input type="checkbox" class="form-field" />
+            <svg class="field-icon">
+              <use href="./images/icons.svg#checkbox"></use>
+            </svg>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+          </label>
+          <button type="submit" class="button submit">Отправить</button>
+        </form>
       </div>
     </div>
 
