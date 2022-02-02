@@ -804,6 +804,10 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  outline-color: rgba(33, 33, 33, 0.2);
+
+  transition: outline-color 250ms var(--hover-efect);
 }
 
 .comment {
@@ -861,6 +865,8 @@ img {
   width: 18px;
   height: 18px;
   fill: var(--title-color);
+
+  transition: fill 250ms var(--hover-efect);
 }
 
 .field-checkbox {
@@ -877,6 +883,7 @@ img {
   height: 15px;
   border: 2px solid var(--title-color);
   border-radius: 2px;
+  background-color: var(--first-bgcolor);
 }
 
 .submit {
